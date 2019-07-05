@@ -1,5 +1,6 @@
 os: osx
 script:
+  - brew install conan
   - conan install .
   - source activate.sh
   - PATH=$PATH:$CMAKE_PREFIX_PATH/bin
