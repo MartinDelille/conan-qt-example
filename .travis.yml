@@ -1,0 +1,7 @@
+language: cpp
+compiler:
+- clang
+- gcc
+script:
+  - qmake conan-qt-example.pro
+  - ./conan-qt-example
