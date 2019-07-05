@@ -1,5 +1,8 @@
 os: osx
 script:
+  - conan install .
+  - source activate.sh
+  - PATH=$PATH:$CMAKE_PREFIX_PATH/bin
   - qmake -v
   - qmake conan-qt-example.pro
   - make
