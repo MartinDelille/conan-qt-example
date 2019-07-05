@@ -1,8 +1,9 @@
 os: osx
+language: cpp
 script:
   - brew install conan
   - conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan
-  - conan install .
+  - conan install . --build=missing
   - source activate.sh
   - PATH=$PATH:$CMAKE_PREFIX_PATH/bin
   - qmake -v
