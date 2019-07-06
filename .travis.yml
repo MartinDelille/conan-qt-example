@@ -1,15 +1,17 @@
+compiler: clang
 matrix:
   include:
     - os: linux
       dist: xenial
+      language: python
+      python: "3.6"
+      install:
+        - pip install conan
     - os: osx
-language: python
-python: "3.6"
-compiler: clang
-install:
-  - pip install conan
-  - conan user
+      install:
+        - brew install conan
 script:
+  - conan user
   - conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan
   - conan install . --build=missing
   - source activate.sh
