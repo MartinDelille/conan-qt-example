@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/MartinDelille/conan-qt-example.svg?branch=master)](https://travis-ci.org/MartinDelille/conan-qt-example)
+
 # conan-qt-example
 
 An example of using Qt from conan:
