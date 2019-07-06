@@ -1,5 +1,5 @@
 [requires]
-qt/5.6.3@bincrafters/stable
+Qt/5.6.3@bincrafters/stable
 
 [generators]
 virtualenv
