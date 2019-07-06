@@ -7,8 +7,7 @@ An example of using Qt from conan:
 ```
 conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan
 conan install . --build=missing
-source activate.sh
-PATH=$CMAKE_PREFIX_PATH/bin:$PATH
+source activate_run.sh
 qmake conan-qt-example.pro
 make
 ./conan-qt-example
