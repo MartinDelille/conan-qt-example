@@ -1,9 +1,4 @@
 compiler: clang
-before_cache:
-  - rm -rf $HOME/.conan/data
-cache:
-  directories:
-    - $HOME/.conan/data
 matrix:
   include:
     - os: linux
@@ -13,7 +8,9 @@ matrix:
       install:
         - pip install conan
     - os: osx
-      env: HOMEBREW_NO_AUTO_UPDATE=1
+      cache:
+        directories:
+          - /usr/local/Homebrew
       install:
         - brew install conan
 script:
