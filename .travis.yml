@@ -1,4 +1,7 @@
 compiler: clang
+cache:
+  directories:
+    - $HOME/.conan/data
 matrix:
   include:
     - os: linux
