@@ -1,26 +1,27 @@
-language: cpp
 compiler: clang
 matrix:
   include:
     - os: linux
       dist: xenial
-      install:
+      language: python
+      python: "3.7"
+      before_install:
         - pip install conan
       before_script:
         - source activate.sh
         - PATH=$CMAKE_PREFIX_PATH/bin:$PATH
     - os: osx
-      install:
+      before_install:
         - brew install conan
       before_script:
         - source activate.sh
         - PATH=$CMAKE_PREFIX_PATH/bin:$PATH
     - os: windows
-      install:
+      before_install:
         - choco install conan
       before_script:
         - activate.bat
-after_install:
+install:
   - conan user
   - conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan
   - conan install . --build=missing
