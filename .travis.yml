@@ -7,16 +7,25 @@ matrix:
       python: "3.6"
       install:
         - pip install conan
+      before_script:
+        - source activate.sh
+        - PATH=$CMAKE_PREFIX_PATH/bin:$PATH
     - os: osx
       install:
         - brew install conan
-script:
+       before_script:
+         - source activate.sh
+         - PATH=$CMAKE_PREFIX_PATH/bin:$PATH
+    - os: windows
+      install:
+        - choco install conan
+       before_script:
+         - activate.bat
+after_install:
   - conan user
   - conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan
   - conan install . --build=missing
-  - source activate.sh
-  - PATH=$CMAKE_PREFIX_PATH/bin:$PATH
-  - which qmake
+script:
   - qmake -v
   - qmake conan-qt-example.pro
   - make
