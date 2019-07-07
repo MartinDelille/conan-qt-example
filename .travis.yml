@@ -20,6 +20,7 @@ matrix:
     - os: windows
       before_install:
         - choco install conan
+        - refreshenv
       before_script:
         - activate.bat
 install:
