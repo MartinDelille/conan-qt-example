@@ -19,8 +19,8 @@ matrix:
         - PATH=$CMAKE_PREFIX_PATH/bin:$PATH
     - os: windows
       before_install:
-        - choco install python3
-        - pip install conan
+        - choco install python3 pip3
+        - pip3 install conan
       before_script:
         - activate.bat
 install:
