@@ -1,4 +1,6 @@
 compiler: clang
+before_cache:
+  - rm -rf $HOME/.conan/data
 cache:
   directories:
     - $HOME/.conan/data
