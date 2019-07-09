@@ -2,4 +2,4 @@
 qt/5.9.8@bincrafters/stable
 
 [generators]
-virtualenv
+virtualrunenv
