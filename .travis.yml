@@ -8,7 +8,7 @@ matrix:
       install:
         - pip install conan
     - os: osx
-      env: HOMEBREW_NO_AUTO_UPDATE=1
+      env: HOMEBREW_NO_AUTO_UPDATE=0
       cache:
         directories:
           - /usr/local/Homebrew
